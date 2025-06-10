@@ -1,0 +1,53 @@
+/* colors.css */
+:root {
+    /* Sistema de temas mejorado */
+    --theme-primary: #0a192f;
+    --theme-secondary: #172a45;
+    --theme-accent: #64ffda;
+    --theme-text: #ccd6f6;
+    --theme-text-secondary: #8892b0;
+    --theme-bg: #0a192f;
+    --theme-card: #112240;
+    --theme-nav: rgba(10, 25, 47, 0.95);
+    --theme-skill-bar: #233554;
+    --theme-wave-1: #64ffda;
+    --theme-wave-2: #57d3ff;
+    --theme-wave-3: #a166ff;
+}
+
+.light-mode {
+    --theme-primary: #f8f9fa;
+    --theme-secondary: #e9ecef;
+    --theme-accent: #0077b6;
+    --theme-text: #343a40;
+    --theme-text-secondary: #495057;
+    --theme-bg: #f8f9fa;
+    --theme-card: #ffffff;
+    --theme-nav: rgba(248, 249, 250, 0.95);
+    --theme-skill-bar: #e9ecef;
+    --theme-wave-1: #0077b6;
+    --theme-wave-2: #00b4d8;
+    --theme-wave-3: #7209b7;
+}
+
+/* Añadir temas adicionales */
+.purple-mode {
+    --theme-accent: #9c27b0;
+    --theme-wave-1: #9c27b0;
+    --theme-wave-2: #673ab7;
+    --theme-wave-3: #3f51b5;
+}
+
+.dark-purple-mode {
+    --theme-primary: #1a1a2e;
+    --theme-secondary: #16213e;
+    --theme-accent: #e94560;
+    --theme-text: #f1f1f1;
+    --theme-text-secondary: #b8b8b8;
+    --theme-bg: #1a1a2e;
+    --theme-card: #16213e;
+    --theme-nav: rgba(26, 26, 46, 0.95);
+    --theme-wave-1: #e94560;
+    --theme-wave-2: #0f3460;
+    --theme-wave-3: #533483;
+}

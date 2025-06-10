@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - DaniiRC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="colors.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/gif" href="favicon.gif">
+</head>
+
+<body>
+    <div class="light x1"></div>
+    <div class="light x2"></div>
+    <div class="light x3"></div>
+    <div class="light x4"></div>
+    <div class="light x5"></div>
+
+    <!-- Engranaje arriba a la derecha -->
+    <div class="settings-float">
+        <button id="theme-toggle" aria-label="Configuración">
+            <i class="fas fa-cog"></i>
+        </button>
+        <div id="settings-menu" class="settings-menu">
+            <button class="settings-option" id="visual-mode-btn">Modo visual <i
+                    class="fas fa-chevron-right"></i></button>
+            <button class="settings-option" id="language-btn">Idioma <i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div id="visual-mode-menu" class="sub-menu">
+            <button class="back-btn"><i class="fas fa-chevron-left"></i> Atrás</button>
+            <button class="sub-option" id="dark-mode"><i class="fas fa-moon"></i> Oscuro</button>
+            <button class="sub-option" id="light-mode"><i class="fas fa-sun"></i> Claro</button>
+        </div>
+        <div id="language-menu" class="sub-menu">
+            <button class="back-btn"><i class="fas fa-chevron-left"></i> Atrás</button>
+            <button class="sub-option" id="lang-es"><i class="fas fa-flag"></i> Español</button>
+            <button class="sub-option" id="lang-en"><i class="fas fa-flag-usa"></i> Inglés</button>
+        </div>
+    </div>
+
+    <header>
+        <div class="nav-container">
+            <nav>
+                <div class="nav-box">
+                    <ul>
+                        <li><a href="#home" id="nav-home">Inicio</a></li>
+                        <li><a href="#skills" id="nav-skills">Skills</a></li>
+                        <li><a href="#projects" id="nav-projects">Proyectos</a></li>
+                        <li><a href="#contact" id="nav-contact">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="full-height">
+            <div class="container">
+                <h1 id="home-title">Bienvenido, soy DaniiRC</h1>
+                <p class="description">Estudiante de DAM. Creo soluciones digitales con código
+                    limpio y eficiente.</p>
+                <div class="typewriter-container">
+                    <h2 class="typewriter"></h2>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/DaniiRC" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <h2 id="skills-title">Mis Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fab fa-html5"></i>
+                        <h3>HTML5</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-css3-alt"></i>
+                        <h3>CSS3</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-java"></i>
+                        <h3>Java</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-database"></i>
+                        <h3>MySQL</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2 id="projects-title">Mis Proyectos</h2>
+                <div id="projects-container" class="projects-grid"></div>
+                <div class="projects-buttons">
+                    <button id="show-more-projects" class="btn">Mostrar más</button>
+                    <button id="show-less-projects" class="btn" style="display:none;">Mostrar menos</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2 id="contact-title">Contacta conmigo</h2>
+                <div class="contact-content">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 DaniiRC. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
