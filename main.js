@@ -12,7 +12,7 @@ async function loadProjects() {
     container.innerHTML = '';
 
     try {
-        const res = await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?sort=updated`);
+        const res = await fetch('/api/repos');
         const repos = await res.json();
 
         if (!Array.isArray(repos)) throw new Error();

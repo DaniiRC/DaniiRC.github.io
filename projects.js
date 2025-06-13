@@ -7,9 +7,9 @@ const CONFIG = {
 
 async function fetchGitHubRepos() {
     try {
-        const response = await fetch(`https://api.github.com/users/${CONFIG.GITHUB_USERNAME}/repos?sort=updated&direction=desc`);
+        const response = await fetch('/api/repos');
         if (!response.ok) throw new Error('Error al obtener repositorios');
-        
+
         const repos = await response.json();
         return repos.filter(repo => !CONFIG.EXCLUDE_REPOS.includes(repo.name) && !repo.fork && !repo.archived);
     } catch (error) {
@@ -60,7 +60,7 @@ async function fetchGitHubRepos() {
 function createProjectCard(repo) {
     const card = document.createElement('div');
     card.className = 'project-card';
-    
+
     const languages = repo.language || 'Code';
     const colors = {
         'JavaScript': '#f1e05a',
@@ -70,7 +70,7 @@ function createProjectCard(repo) {
         'Python': '#3572A5',
         'Code': '#586069'
     };
-    
+
     card.innerHTML = `
         <div class="project-image" style="background-color: ${colors[languages] || colors['Code']}">
             <i class="fas fa-code"></i>
@@ -84,7 +84,7 @@ function createProjectCard(repo) {
             </div>
         </div>
     `;
-    
+
     return card;
 }
 
@@ -92,31 +92,31 @@ async function loadProjects() {
     const repos = await fetchGitHubRepos();
     const container = document.getElementById('projects-container');
     const loadMoreBtn = document.getElementById('load-more');
-    
+
     if (!container || !loadMoreBtn) return;
-    
+
     let visibleProjects = 0;
-    
+
     function showProjects(count) {
         const endIndex = Math.min(visibleProjects + count, repos.length);
-        
+
         for (let i = visibleProjects; i < endIndex; i++) {
             const card = createProjectCard(repos[i]);
             container.appendChild(card);
         }
-        
+
         visibleProjects = endIndex;
-        
+
         if (visibleProjects >= repos.length) {
             loadMoreBtn.style.display = 'none';
         } else {
             loadMoreBtn.style.display = 'block';
         }
     }
-    
+
     // Mostrar primeros proyectos
     showProjects(CONFIG.PROJECTS_PER_PAGE);
-    
+
     // Manejar clic en "Mostrar más"
     loadMoreBtn.addEventListener('click', () => {
         showProjects(CONFIG.PROJECTS_PER_PAGE);
