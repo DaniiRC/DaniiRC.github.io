@@ -75,7 +75,7 @@
         <section id="skills">
             <div class="container">
                 <h2 id="skills-title">Mis Skills</h2>
-                <div class="skills-grid">
+                <div class="skills-grid skills-grid-custom">
                     <div class="skill-card">
                         <i class="fab fa-html5"></i>
                         <h3>HTML5</h3>
@@ -92,6 +92,18 @@
                         <i class="fas fa-database"></i>
                         <h3>MySQL</h3>
                     </div>
+                </div>
+                <div class="skills-grid skills-grid-bottom">
+                    <div></div>
+                    <div class="skill-card">
+                        <i class="fas fa-code"></i>
+                        <h3>XML</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-python"></i>
+                        <h3>Python</h3>
+                    </div>
+                    <div></div>
                 </div>
             </div>
         </section>
@@ -111,7 +123,7 @@
             <div class="container">
                 <h2 id="contact-title">Contacta conmigo</h2>
                 <div class="contact-content">
-                    <form id="contact-form">
+                    <form id="contact-form" action="https://formsubmit.co/daniirc.contacto@gmail.com" method="POST">
                         <div class="form-group">
                             <label for="name">Nombre</label>
                             <input type="text" id="name" name="name" required>
@@ -125,6 +137,9 @@
                             <textarea id="message" name="message" required></textarea>
                         </div>
                         <button type="submit" class="btn">Enviar mensaje</button>
+                        <!-- Opcional: evitar captcha y redirección -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://daniirc.github.io/gracias.html">
                     </form>
                 </div>
             </div>

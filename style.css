@@ -346,6 +346,17 @@ nav ul li a:hover {
     gap: 30px;
 }
 
+.skills-grid-custom,
+.skills-grid-bottom {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.skills-grid-bottom {
+    margin-top: 20px;
+}
+
 .skill-card {
     background: var(--theme-card);
     color: var(--theme-text);

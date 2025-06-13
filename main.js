@@ -263,16 +263,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Formulario de contacto
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Mensaje enviado (esto es una simulación)');
-            contactForm.reset();
-        });
-    }
-
     // Mostrar más/menos proyectos
     const showMoreBtn = document.getElementById('show-more-projects');
     const showLessBtn = document.getElementById('show-less-projects');
