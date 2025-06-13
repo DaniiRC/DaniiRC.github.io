@@ -86,7 +86,7 @@ function showNotification(message, type) {
     setTimeout(() => {
         notification.style.opacity = '1';
     }, 10);
-
+    
     setTimeout(() => {
         notification.style.opacity = '0';
         setTimeout(() => notification.remove(), 300);
